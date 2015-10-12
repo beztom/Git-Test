@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MBFDog.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    MBFDog *myDog = [[MBFDog alloc] init];
+    myDog.name = @"Gracie";
+    myDog.breed = @"Lurcher";
+    myDog.age = 4;
+    int dogYears = [myDog ageInDogYearsFromAge:myDog.age];
+    NSLog(@"Age in years: %i, Age in dog years: %i", myDog.age, dogYears);
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
